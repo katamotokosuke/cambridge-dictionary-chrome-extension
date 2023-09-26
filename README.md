@@ -1,0 +1,1 @@
+# cambridge-dictionaly-chrome-extension
