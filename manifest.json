@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Cambridge Dictionary Guinness",
+  "description": "Cambridge Dictionary Guinness(CDG) will support you quickly access to dictionary.",
+  "version": "0.1",
+  "action": {
+    "default_popup": "static/popup.html",
+    "default_icon": "images/icon.png"
+  }
+}
