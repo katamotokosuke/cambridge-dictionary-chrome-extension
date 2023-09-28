@@ -6,7 +6,7 @@
     "16": "images/icon.png",
     "32": "images/icon.png",
     "48": "images/icon.png",
-    "128": "images/icon.png"
+    "128": "images/icon128x128.png"
   },
   "author": {
     "email": "katamotokosuke0605@gmail.com"
@@ -29,6 +29,6 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": ["activeTab", "tabs", "scripting"],
+  "permissions": [],
   "action": {}
 }
