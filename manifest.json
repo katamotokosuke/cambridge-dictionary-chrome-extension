@@ -1,15 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Cambridge Dictionary Guinness",
-  "description": "Cambridge Dictionary Guinness(CDG) will support you quickly access to dictionary.",
+  "name": "Cambridge Dictionary Popup",
+  "description": "Cambridge Dictionary Popup will support you quickly access to dictionary.",
   "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
     "48": "images/icon.png",
     "128": "images/icon.png"
   },
   "author": {
     "email": "katamotokosuke0605@gmail.com"
   },
-  "version": "0.1",
+  "version": "0.0.0.1",
   "background": {
     "service_worker": "src/service-worker.js"
   },

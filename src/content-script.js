@@ -9,8 +9,11 @@ let doubleClicked = false;
  * If event was hire, a popup will appear at near the clicked location
  */
 document.addEventListener("dblclick", (event) => {
-    doubleClicked = true;
     const selectedText = window.getSelection().toString().trim();
+    if (selectedText === "") {
+        return;
+    }
+    doubleClicked = true;
     const [x, y] = estimateBubbleCoordinate(event);
     document.body.insertAdjacentHTML('beforeend', bubbleElement(x, y, selectedText));
 });
