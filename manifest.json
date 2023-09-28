@@ -13,6 +13,20 @@
   "background": {
     "service_worker": "src/service-worker.js"
   },
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/*" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content-script.js"],
+      "css": ["static/popup_in_website.css"],
+      "run_at": "document_end"
+    }
+  ],
   "permissions": ["activeTab", "tabs", "scripting"],
   "action": {}
 }
