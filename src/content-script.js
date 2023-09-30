@@ -1,6 +1,6 @@
 
 const ROOT_URL = "https://dictionary.cambridge.org/dictionary/english/"
-// this variable is will be true when double click event hired,
+// this variable will be true when double click event hired,
 // but if other event hired,  for example click event, it will be false.
 let doubleClicked = false;
 
@@ -40,8 +40,8 @@ const bubbleElement = function(x, y, word) {
 }
 
 const estimateBubbleCoordinate = function (event) {
-    const x = event.layerX;
-    const y = event.layerY;
+    const x = event.pageX;
+    const y = event.pageY;
     return [x , y]
 }
 
