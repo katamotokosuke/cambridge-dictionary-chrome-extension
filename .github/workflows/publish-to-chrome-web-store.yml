@@ -1,9 +1,9 @@
 name: Publish to Chrome Web Store
-
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - github-actions-demo # this is temporary setting. it's to be 'main'
 jobs:
   build:
     name: Publish Chrome Web Extension
