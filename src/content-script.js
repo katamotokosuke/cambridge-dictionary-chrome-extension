@@ -1,5 +1,4 @@
-
-const ROOT_URL = "https://dictionary.cambridge.org/dictionary/english/"
+const ROOT_URL = "https://dictionary.cambridge.org/dictionary/english/";
 // this variable will be true when double click event hired,
 // but if other event hired,  for example click event, it will be false.
 let doubleClicked = false;
@@ -15,21 +14,20 @@ document.addEventListener("dblclick", (event) => {
     }
     doubleClicked = true;
     const [x, y] = estimateBubbleCoordinate(event);
-    document.body.insertAdjacentHTML('beforeend', bubbleElement(x, y, selectedText));
+    document.body.insertAdjacentHTML("beforeend", bubbleElement(x, y, selectedText));
 });
 
-document.addEventListener('click', function(e) {
+document.addEventListener("click", function () {
     if (doubleClicked) {
         doubleClicked = false;
         const bubbleRoot = document.getElementById("cdic-root");
-        bubbleRoot.remove()
+        bubbleRoot.remove();
     }
 });
 
-
-const bubbleElement = function(x, y, word) {
-    const extensionId = chrome.runtime.id
-    const iconImageAbsUrl = `chrome-extension://${extensionId}/images/icon.png`
+const bubbleElement = function (x, y, word) {
+    const extensionId = chrome.runtime.id;
+    const iconImageAbsUrl = `chrome-extension://${extensionId}/images/icon.png`;
     return `
 <a id="cdic-root" href = ${generateUrl(word)} target="_blank">
     <div id="cdic-bubble" style="position: absolute; left: ${x}px; top: ${y}px">
@@ -37,14 +35,14 @@ const bubbleElement = function(x, y, word) {
     </div>
 </a>
     `;
-}
+};
 
 const estimateBubbleCoordinate = function (event) {
     const x = event.pageX;
     const y = event.pageY;
-    return [x , y]
-}
+    return [x, y];
+};
 
 const generateUrl = function (word) {
-    return ROOT_URL + "/" + word
-}
+    return ROOT_URL + "/" + word;
+};

@@ -5,7 +5,7 @@
 }
 
 #cdic-bubble {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(245 245 245);
     box-sizing: content-box;
     cursor: pointer;
     height: 19px;
@@ -13,7 +13,7 @@
     z-index: 2147483648;
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(220, 220, 220);
+    border-color: rgb(220 220 220);
     border-image: initial;
     border-radius: 5px;
     padding: 3px;

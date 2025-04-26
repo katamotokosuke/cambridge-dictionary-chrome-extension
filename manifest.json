@@ -1,33 +1,33 @@
 {
-  "manifest_version": 3,
-  "name": "Cambridge Dictionary Popup",
-  "description": "Cambridge Dictionary Popup will support you quickly access to dictionary.",
-  "icons": {
-    "16": "images/icon.png",
-    "32": "images/icon.png",
-    "48": "images/icon.png",
-    "128": "images/icon128x128.png"
-  },
-  "author": {
-    "email": "katamotokosuke0605@gmail.com"
-  },
-  "version": "0.0.0.2",
-  "background": {
-    "service_worker": "src/service-worker.js"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [ "images/*" ],
-      "matches": [ "<all_urls>" ]
-    }
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["src/content-script.js"],
-      "css": ["static/popup_in_website.css"],
-      "run_at": "document_end"
-    }
-  ],
-  "action": {}
+    "manifest_version": 3,
+    "name": "Cambridge Dictionary Popup",
+    "description": "Cambridge Dictionary Popup will support you quickly access to dictionary.",
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon128x128.png"
+    },
+    "author": {
+        "email": "katamotokosuke0605@gmail.com"
+    },
+    "version": "0.0.0.2",
+    "background": {
+        "service_worker": "src/service-worker.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["images/*"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/content-script.js"],
+            "css": ["static/popup_in_website.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {}
 }
