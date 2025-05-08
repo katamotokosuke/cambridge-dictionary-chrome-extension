@@ -1,0 +1,28 @@
+name: Publish to Chrome Web Store
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+on:
+  push:
+    branches:
+      - github-actions-demo # this is temporary setting. it's to be 'main'
+jobs:
+  build:
+    name: Publish Chrome Web Extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: build package
+        run: |
+          npm ci
+          npm run build
+      - name: upload and release
+        uses: mnao305/chrome-extension-upload@v4.0.1
+        with:
+          file-path: dist/dummy.zip
+          extension-id: djogejamlkoimhpgjoeaafgohgejbmfj
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+          publish: false
